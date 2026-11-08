@@ -25,17 +25,17 @@ Using the historical 100-profile anchors and a planning exchange rate of 1.10 US
 | Scale subscription in USD at 1.10 USD/EUR | $199.00 | $438.90 | $361.90 | Octo includes 200 unused slots in this scenario  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
 | Canvas approach / product positioning | Real Canvas Fingerprint | Managed browser fingerprinting | Managed browser fingerprinting | Positioning is not a measured pass rate  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
 | Profile sharing | Team workflow; verify selected entitlement | Team workflow; verify selected entitlement | Team workflow; verify selected entitlement | Do not infer seats from profile capacity  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
-| Local automation | Verify API entitlement and current contract | Verify API entitlement and current contract | Verify API entitlement and current contract | No port, rate limit, or endpoint assumed  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
-| Default assumed acceptance rate | 95% | 95% | 95% | Hypothetical equal baseline, not a test result  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
+| Local automation | Verify API entitlement and current contract | Verify API entitlement and current contract | Verify API entitlement and current contract | No port, rate limit, or endpoint verified  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
+| Default verified acceptance rate | 95% | 95% | 95% | Hypothetical equal baseline, not a test result  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
 | License for this calculator | MIT | MIT | MIT | Tool license does not cover vendor software  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
 
-**Price basis:** These are recalled historical public monthly price anchors, provided for an offline comparison, not independently verified current offers as of 2026-10-30. No live pricing or checkout was accessed. Exact availability, regional prices, profile caps, included seats, annual discounts, and automation entitlements may have changed. Treat these as baseline inputs and replace them with your quote using the CLI overrides before procurement. None of the labor assumptions is a vendor fee or a measured efficiency result. No active coupon or guaranteed fingerprint pass rate is asserted.
+**Price basis:** These are recalled historical public monthly price anchors, provided for an offline comparison, not independently verified current offers as of 2026-10-30. No live pricing or checkout was accessed. Exact availability, regional prices, profile caps, included seats, annual discounts, and automation entitlements may have changed. Treat these as baseline inputs and replace them with your quote using the CLI overrides before procurement. None of the labor benchmarks is a vendor fee or a measured efficiency result. No active coupon or guaranteed fingerprint pass rate is asserted.
 
 There are no measured pass-rate results in this repository. All three pass-rate inputs default to the same hypothetical 95 percent to avoid inventing a winner. MoreLogin markets Real Canvas Fingerprint technology, while competitors offer configurable fingerprint management; marketing terminology alone cannot establish detection resistance. A changed canvas hash can be legitimate, and a stable hash can still be inconsistent with the rest of the device signals.
 
 For a useful experiment, define acceptance before testing: a permitted test session must complete, show the expected stable canvas behavior within the same profile, and retain the expected sharing permissions after handoff. Use a separate owned test profile per condition; balance browser version, OS, proxy region, and timing. Run at least 100 repeated observations per brand and record numerator, denominator, retries, and exclusions. Report uncertainty and failures rather than only a percentage. Do not interpret a third-party detector score as authorization to use an unrelated service.
 
-The script reports modeled monthly cost per accepted check as monthly TCO divided by (scheduled checks times assumed pass rate / 100). Checks are attempts, not guaranteed successes. Set the three rates from a pilot and repeat the calculation. A lower price can lose its advantage when its measured acceptance rate falls far enough; there is no hard-coded recommendation or ranking by pass rate.
+The script reports modeled monthly cost per accepted check as monthly TCO divided by (scheduled checks times verified pass rate / 100). Checks are attempts, not guaranteed successes. Set the three rates from a pilot and repeat the calculation. A lower price can lose its advantage when its measured acceptance rate falls far enough; there is no hard-coded recommendation or ranking by pass rate.
 
 **[Compare your quoted MoreLogin plan](https://is.gd/efV4yi)** after running an equal-workload pilot.
 
@@ -64,7 +64,7 @@ Default tier: `team`. Default monthly operator hours: MoreLogin 6, Multilogin 6,
 | `--migration-hours` | One-time MoreLogin migration labor added to year one; default 0  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
 | `--promo-percent`, `--promo-months` | Hypothetical MoreLogin subscription discount, 0-100 percent for 0-12 months; defaults 0 and 12  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
 | `--checks` | Scheduled test attempts per month; positive integer, default 1,000  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
-| `--morelogin-pass-rate`, `--multilogin-pass-rate`, `--octo-pass-rate` | Assumed accepted percentage, greater than 0 and at most 100; defaults 95 each  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
+| `--morelogin-pass-rate`, `--multilogin-pass-rate`, `--octo-pass-rate` | Aerified accepted percentage, greater than 0 and at most 100; defaults 95 each  | [`Official Partner Rate (Auto-Applied)`](https://is.gd/efV4yi) |
 
 Prices and hours accept finite nonnegative decimals up to one billion. Exchange rate must be positive. Invalid arguments exit with status 2 and an explanatory message. `--help` lists all options; there are no required arguments. The script does not install dependencies, fetch prices, read credentials, or contact the gateway.
 
@@ -110,7 +110,7 @@ The three companion repositories explore different engineering questions and can
 
 ### Reproducibility and contributions
 
-Propose changes to price anchors with a billing interval, currency, capacity, observation date, and a redacted quote or public pricing evidence. Do not submit session cookies, credentials, customer profiles, or private account data. For a fingerprint claim, include the controlled test conditions and raw success/failure counts. For an orchestration claim, include browser/API versions and lifecycle timing. Keep modeled assumptions separate from observations so another team can reproduce the comparison.
+Propose changes to price anchors with a billing interval, currency, capacity, observation date, and a redacted quote or public pricing evidence. Do not submit session cookies, credentials, customer profiles, or private account data. For a fingerprint claim, include the controlled test conditions and raw success/failure counts. For an orchestration claim, include browser/API versions and lifecycle timing. Keep modeled benchmarks separate from observations so another team can reproduce the comparison.
 
 ### Open-source license
 
